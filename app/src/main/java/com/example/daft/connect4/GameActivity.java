@@ -22,7 +22,7 @@ public class GameActivity extends AppCompatActivity {
     private TextView[] pv;
     private ImageView disc;
     private MediaPlayer mediaPlayer;
-    //private boolean isBgmMute;
+    public static boolean isSoundOff=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,16 +118,17 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void playSound(){
-        if(mediaPlayer==null){
-            mediaPlayer = MediaPlayer.create(GameActivity.this, R.raw.coin);
-            /*if(isBgmMute){
+        if(mediaPlayer==null) {
+            mediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.coin);
+            if(isSoundOff){
                 mediaPlayer.setVolume(0.0f,0.0f);
-            }*/
+            }
+        }
+
             if(mediaPlayer.isPlaying()){
                 mediaPlayer.pause();
                 mediaPlayer.seekTo(0);
             }
             mediaPlayer.start();
-        }
     }
 }
