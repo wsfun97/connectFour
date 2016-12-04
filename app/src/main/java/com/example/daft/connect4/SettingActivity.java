@@ -8,6 +8,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import static com.example.daft.connect4.R.id.radio_sound0;
 import static com.example.daft.connect4.R.id.radio_sound1;
 
 /**
@@ -47,6 +48,8 @@ public class SettingActivity extends AppCompatActivity {
 
                 if(((RadioButton)findViewById(radio_sound1)).isChecked()){
                     GameActivity.isSoundOff = true;
+                }else if(((RadioButton)findViewById(radio_sound0)).isChecked()) {
+                    GameActivity.isSoundOff = false;
                 }
             }
 
