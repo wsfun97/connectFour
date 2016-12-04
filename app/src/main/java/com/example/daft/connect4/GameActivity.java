@@ -119,7 +119,7 @@ public class GameActivity extends AppCompatActivity {
 
     public void playSound(){
         if(mediaPlayer==null) {
-            mediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.coin);
+            mediaPlayer = MediaPlayer.create(GameActivity.this, R.raw.coin);
             if(isSoundOff){
                 mediaPlayer.setVolume(0.0f,0.0f);
             }
