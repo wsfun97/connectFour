@@ -60,9 +60,7 @@ android:layout_gravity="center"
         android:layout_marginRight="20px"
         android:layout_width="158dp"
         android:textStyle="normal|bold"
-        android:textAllCaps="false"
-        android:layout_weight="0.21" />
-
+        android:textAllCaps="false" />
 
 
 
