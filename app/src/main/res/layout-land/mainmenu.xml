@@ -11,13 +11,12 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="345dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="400px"
-        android:layout_marginRight="50px"
         android:src="@drawable/logo"
+        android:layout_weight="0.55"
+        android:layout_gravity="center"
         android:scaleType="fitXY"
-        android:layout_weight="0.55" />
+        android:layout_width="1200px" />
 
 
     <Button
