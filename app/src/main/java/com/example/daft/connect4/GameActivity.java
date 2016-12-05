@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -111,9 +113,16 @@ public class GameActivity extends AppCompatActivity {
         disc.setLayoutParams(new LinearLayout.LayoutParams(
                 columns.get(col).getWidth(),
                 LinearLayout.LayoutParams.WRAP_CONTENT));
+        //newly added
+        Animation am = new TranslateAnimation(0.0f,0.0f,-1000.0f,0.0f);
+        am.setDuration(1000);
+
         if (currentPlayerIndex == 1) //this disc is put in last turn
             disc.setImageResource(R.drawable.disc1_transp);
         else disc.setImageResource(R.drawable.disc2_transp);
+
+        //newly added
+        disc.startAnimation(am);
 
         colContainers.get(col).addView(disc, 0);
     }
